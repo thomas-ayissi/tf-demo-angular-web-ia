@@ -1,0 +1,22 @@
+<h2>Les pipes</h2>
+<div>
+    <h3>Les pipes de base</h3>
+    <div>
+        <p>Ma chaine avant pipe : {{maChaine}}</p>
+        <p>Ma chaine toute en majuscule : {{maChaine | uppercase}}</p>
+        <p>Ma chaine toute en minuscule : {{maChaine | lowercase}}</p>
+        <p>Ma chaine toute en Skyblog : {{maChaine | titlecase}}</p>
+
+    </div>
+    <div>
+        <p>Mon nombre avant pipe : {{monNombre}}</p>
+        <p>Mon nombre arrondi : {{ monNombre | number : '1.0-2' }}</p>
+    </div>
+    <div>
+        <p>Ma date avant pipe : {{maDate}}</p>
+        <p>Ma date formatée avec un pipe : {{maDate | date : 'dd/MM/yyyy'}}</p>
+    </div>
+</div>
+<div>
+    <h3>Les custom pipes</h3>
+</div>
