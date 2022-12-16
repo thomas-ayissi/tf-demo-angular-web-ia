@@ -19,4 +19,7 @@
 </div>
 <div>
     <h3>Les custom pipes</h3>
+    <p>{{maTemperature}}°C équivaut à {{maTemperature | toFahrenheit | number : '1.0-1'}}°F</p>
+    <p>{{maTemperature}}°C = {{maTemperature | convertTemp : 'f'}}°F</p>
+    <p>{{maTemperatureF}}°F = {{maTemperatureF | convertTemp : 'c' | number : '1.0-1'}}°C</p>
 </div>

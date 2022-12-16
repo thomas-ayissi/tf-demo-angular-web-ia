@@ -6,6 +6,7 @@ import { DemoComponent } from './demo.component';
 import { Demo1Component } from './demo1/demo1.component';
 import { FormsModule } from '@angular/forms';
 import { Demo2Component } from './demo2/demo2.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { Demo2Component } from './demo2/demo2.component';
   imports: [
     CommonModule,
     DemoRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   bootstrap : [DemoComponent]
 
