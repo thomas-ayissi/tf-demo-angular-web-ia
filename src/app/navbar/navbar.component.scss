@@ -2,7 +2,7 @@ nav {
     background-color: lightgrey;
     min-height: 100%;
     width: 20vw;
-    padding: 0 1%;
+    padding: 2% 1%;
 }
 
 ul {
@@ -12,6 +12,11 @@ ul {
 a {
     color : darkslategray;
     text-decoration: none;
+}
+
+li {
+    list-style: none;
+    margin : 1.5% 0;
 }
 
 a:visited {
