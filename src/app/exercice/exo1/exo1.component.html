@@ -1,7 +1,13 @@
 <h2>Exercice Timer</h2>
-<!-- <p>{{totalSecondes | monSuperPipe }}</p> -->
-<!-- X minutes X secondes -->
-<!-- XX:XX -->
-<!-- <button (click)="start()" [disabled]="untruc">Start</button>
-<button (click)="pause()" [disabled]="untruc">Pause</button>
-<button (click)="reset()" [disabled]="untruc">Reset</button> -->
+<div class="chapter">
+    <p>{{totalSecondes | convertTime }}</p>
+    <div>
+        <!-- <button (click)="start()" [disabled]="isActive">Start</button> -->
+        <button (click)="start()" [disabled]="timer">Start</button>
+
+        <!-- <button (click)="pause()" [disabled]="!isActive">Pause</button> -->
+        <button (click)="pause()" [disabled]="!timer">Pause</button>
+
+        <button (click)="reset()" [disabled]="totalSecondes === 0">Reset</button>
+    </div>
+</div>
