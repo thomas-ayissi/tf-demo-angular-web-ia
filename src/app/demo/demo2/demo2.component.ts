@@ -12,5 +12,4 @@ export class Demo2Component {
     maDate : Date = new Date();
     maTemperature : number = -17.8;
     maTemperatureF : number = 42;
-
 }

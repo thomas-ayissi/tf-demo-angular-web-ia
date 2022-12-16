@@ -1,7 +1,8 @@
 <h2>Les pipes</h2>
-<div>
+<div class="chapter">
     <h3>Les pipes de base</h3>
     <div>
+        <h4>Pipes sur les chaines</h4>
         <p>Ma chaine avant pipe : {{maChaine}}</p>
         <p>Ma chaine toute en majuscule : {{maChaine | uppercase}}</p>
         <p>Ma chaine toute en minuscule : {{maChaine | lowercase}}</p>
@@ -9,15 +10,17 @@
 
     </div>
     <div>
+        <h4>Pipe sur les nombres</h4>
         <p>Mon nombre avant pipe : {{monNombre}}</p>
         <p>Mon nombre arrondi : {{ monNombre | number : '1.0-2' }}</p>
     </div>
     <div>
+        <h4>Pipe sur les dates</h4>
         <p>Ma date avant pipe : {{maDate}}</p>
         <p>Ma date formatée avec un pipe : {{maDate | date : 'dd/MM/yyyy'}}</p>
     </div>
 </div>
-<div>
+<div class="chapter">
     <h3>Les custom pipes</h3>
     <p>{{maTemperature}}°C équivaut à {{maTemperature | toFahrenheit | number : '1.0-1'}}°F</p>
     <p>{{maTemperature}}°C = {{maTemperature | convertTemp : 'f'}}°F</p>
