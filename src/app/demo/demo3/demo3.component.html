@@ -41,6 +41,17 @@
             </div>
         </div>
     </div>
+
+    <div>
+        <h4>ngSwitch</h4>
+        <input type="text" placeholder="Tapez un chiffre entre 1 et 3" [(ngModel)]="choix">
+        <div [ngSwitch]="choix">
+            <div *ngSwitchCase=" 'café' ">Voici votre café ☕</div>
+            <div *ngSwitchCase=" 'thé' ">Voici votre thé 🍵</div>
+            <div *ngSwitchCase=" 'soda' ">Voici votre soda 🥤</div>
+            <div *ngSwitchDefault>Vous avez entré un choix invalide</div>
+        </div>
+    </div>
 </div>
 
 <div>

@@ -55,6 +55,9 @@ export class Demo3Component {
     avatar : '../../assets/images/aurelien.png'
   }]
 
+  //ngSwitch
+  choix! : string;
+
   constructor(){
     //pour le ngStyle -> Change la couleur de joyeux noel toutes les secondes
     setInterval(() => {
