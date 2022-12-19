@@ -2,26 +2,35 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
 
-## Development server
+## Commands
+### INSTALLATION  
+- npm i -g @angular/cli 		-> installer Angular en global sur la machine
+- ng version 			        -> Avoir la version Angular + Node
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### CREATION ET LANCEMENT PROJET 
+- ng new nomProjet 		-> Créer un projet angular
+- ng serve 			    -> Lance sur le port 4200 et on doit aller sur l'url du serveur local
+- ng serve --open 		-> Lance sur le port 4200 et ouvre le projet dans un onglet sur notre navigateur pref
+- ng s --o 			    -> Le raccourcis des flemmards qui fait pareil que la ligne au dessus 
 
-## Code scaffolding
+### CREATIONS 
+#### modules
+- ng generate module nomModule 		-> créer un module
+- ng g m nomModule             		-> pareil mais flemme
+- ng g m nomModule --routing   		-> (créer un module avec routing)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### components
+- ng generate component nomComponent 	-> créer un component
+- ng g c nomComponent 		   	        -> pareil mais flemme
+- ng g c nomDossier/nomComponent     	-> va placer le component créée dans le dossier nomDossier
 
-## Build
+#### pipes
+- ng generate pipe nomPipe		    -> créer un pipe
+- ng g p nomPipe				    -> pareil mais flemme
+- ng g p chemin/cheming/nomPipe		-> créer un pipe dans le dossier cheming lui meme dans le dossier chemin
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### directives
+- ng generate directive nomDirective      -> créer une custom directive
+- ng g d nomDirective			          -> pareil mais flemme
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
