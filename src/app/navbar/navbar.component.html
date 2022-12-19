@@ -1,4 +1,5 @@
-<nav>
+<!-- /////// Navbar avant exo directives /////// -->
+<!-- <nav>
     <ul>
         <li><a routerLink="/"> Accueil </a></li>
         <li>   
@@ -15,6 +16,20 @@
             <a routerLink="/exercice">Exercice</a>
             <ul>
                 <li><a routerLink="/exercice/exo1">Exercice 1 - Le timer</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav> -->
+
+<!-- /////// Navbar après exo directives /////// -->
+<nav>
+    <ul>
+        <li *ngFor="let link of links; let i = index">
+            <a [ngClass]="{active: link.isVisible}" (click)="toggleLink(i)" [routerLink]="link.url">{{link.title}}</a>
+            <ul *ngIf="link.isVisible">
+                <li *ngFor="let child of link.children">
+                    <a [routerLink]="child.url">{{child.title}}</a>
+                </li>
             </ul>
         </li>
     </ul>

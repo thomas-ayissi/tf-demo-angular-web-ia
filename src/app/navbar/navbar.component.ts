@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ILink } from '../models/ILink';
 
 @Component({
   selector: 'app-navbar',
@@ -6,5 +7,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  links : ILink[] = [
+    { title : 'Accueil', url : '/'},
+    { title : 'Demo', url : '/demo', children : [
+      { title : 'Demo 1 - Les Bindings', url : '/demo/demo1'},
+      { title : 'Demo 2 - Les Pipes', url : '/demo/demo2'},
+      { title : 'Demo 3 - Les Directives', url : '/demo/demo3'}
+    ], isVisible : false },
+    { title : 'Exercice', url : '/exercice', children : [
+      { title : 'Exercice 1 - Le timer', url : '/exercice/exo1'}
+    ], isVisible : false}
+  ]
 
+
+  toggleLink(i : number) : void {
+    for(let j : number = 0; j < this.links.length; j++ ) {
+      if(j != i) {
+        this.links[j].isVisible = false;
+      }
+    }
+    this.links[i].isVisible = !this.links[i].isVisible;
+
+    //autre façon
+    // let temp : boolean | undefined = this.links[i].isVisible;
+    // this.links.forEach((link : ILink) => link.isVisible = false)
+    // this.links[i].isVisible = !temp;
+
+  }
 }
