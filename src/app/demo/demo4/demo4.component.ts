@@ -24,7 +24,7 @@ export class Demo4Component {
     id : 2,
     nom : 'Ly',
     prenom : 'Khun',
-    dateNaiss : new Date(1982, 4, 3),
+    dateNaiss : new Date(1982, 4, 6),
     avatar : '../../assets/images/khun.png'
   },
   {
