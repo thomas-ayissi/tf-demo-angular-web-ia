@@ -1,0 +1,9 @@
+<div class="enfant">
+    <h5>Bonjour je suis le composant enfant et mon parent s'appelle {{prenomMonParent}} et a {{ageParent}} ans</h5>
+    <button (click)="declencheBesoin('manger')">Manger</button> 
+    <button  (click)="declencheBesoin('jouer')">Jouer</button>
+    <button  (click)="declencheBesoin('dormir')">Dormir</button>
+
+
+    <ng-content></ng-content>
+</div>

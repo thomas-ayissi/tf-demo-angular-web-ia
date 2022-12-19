@@ -4,6 +4,7 @@ import { ToFahrenheitPipe } from './pipes/to-fahrenheit.pipe';
 import { ConvertTempPipe } from './pipes/convert-temp.pipe';
 import { ConvertTimePipe } from './pipes/convert-time.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
+import { FormateurCardComponent } from './components/formateur-card/formateur-card.component';
 
 
 @NgModule({
@@ -11,13 +12,15 @@ import { HighlightDirective } from './directives/highlight.directive';
     ToFahrenheitPipe,
     ConvertTempPipe,
     ConvertTimePipe,
-    HighlightDirective
+    HighlightDirective,
+    FormateurCardComponent
   ],
   exports : [
     ToFahrenheitPipe,
     ConvertTempPipe,
     ConvertTimePipe,
-    HighlightDirective
+    HighlightDirective,
+    FormateurCardComponent
   ],
   imports: [
     CommonModule
