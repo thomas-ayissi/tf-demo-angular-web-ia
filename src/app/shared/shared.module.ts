@@ -3,18 +3,21 @@ import { CommonModule } from '@angular/common';
 import { ToFahrenheitPipe } from './pipes/to-fahrenheit.pipe';
 import { ConvertTempPipe } from './pipes/convert-temp.pipe';
 import { ConvertTimePipe } from './pipes/convert-time.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 @NgModule({
   declarations: [
     ToFahrenheitPipe,
     ConvertTempPipe,
-    ConvertTimePipe
+    ConvertTimePipe,
+    HighlightDirective
   ],
   exports : [
     ToFahrenheitPipe,
     ConvertTempPipe,
-    ConvertTimePipe
+    ConvertTimePipe,
+    HighlightDirective
   ],
   imports: [
     CommonModule
