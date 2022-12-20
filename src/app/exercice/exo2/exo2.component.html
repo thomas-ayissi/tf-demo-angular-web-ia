@@ -1,0 +1,6 @@
+<h2>Exo Shopping List</h2>
+<div class="chapter">
+    <input type="text" [(ngModel)]="item"> <button (click)="ajouter()">Ajouter</button>
+
+    <app-panier [listProducts]="shoppingList" (sendDelete)="delete($event)" (sendQtUp)="up($event)" (sendQtDown)="down($event)"></app-panier>
+</div>
