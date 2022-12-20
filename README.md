@@ -33,4 +33,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - **ng generate directive nomDirective** → Créer une custom directive
 - **ng g d nomDirective** → Pareil mais flemme
 
+#### services
+- **ng generate service nomService** → Créer un service
+- **ng g s nomService** → Pareil mais flemme
 

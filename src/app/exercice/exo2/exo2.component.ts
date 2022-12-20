@@ -12,7 +12,7 @@ export class Exo2Component {
 
   item: string = '';
 
-  ajouter() {
+  ajouter() : void {
     //Si pas vide et pas full espaces
     if (this.item.trim() !== '') {
       //On regarde si le produit existe déjà dans la liste
@@ -34,17 +34,17 @@ export class Exo2Component {
     }
   }
 
-  delete(indice : number){
+  delete(indice : number) : void {
     this.shoppingList.splice(indice, 1);
 
   }
 
-  up(indice : number){
+  up(indice : number) : void {
     this.shoppingList[indice].qtt ++;
 
   }
 
-  down(indice : number){
+  down(indice : number) : void {
     this.shoppingList[indice].qtt --;
     //Si la quantité arrive à 0, on delete de product
     if(this.shoppingList[indice].qtt === 0){

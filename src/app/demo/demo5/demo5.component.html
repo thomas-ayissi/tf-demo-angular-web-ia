@@ -1,0 +1,17 @@
+<h2>Services</h2>
+<div class="chapter">
+
+    <!-- S'affiche si connectedUser est undefined -->
+    <div *ngIf="!connectedUser">
+        <input type="text" placeholder="Pseudo" [(ngModel)]="pseudo">
+        <input type="password" placeholder="Mot de Passe" [(ngModel)]="mdp">
+        <button (click)="connect()">Se connecter</button>
+    </div>
+
+    <!-- S'affiche si connectedUser n'est pas undefined -->
+    <div *ngIf="connectedUser">
+        <p>Bonjour {{connectedUser.firstname}}</p>
+        <button (click)="disconnect()">Se déconnecter</button>
+    </div>
+
+</div>

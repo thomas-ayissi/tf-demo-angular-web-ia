@@ -20,15 +20,15 @@ export class PanierComponent {
     this.sendQtDown = new EventEmitter<number>();
   }
 
-  onDelete(indice : number){
+  onDelete(indice : number) : void {
     this.sendDelete.emit(indice)
   }
 
-  onUp(indice : number){
+  onUp(indice : number) : void {
     this.sendQtUp.emit(indice);
   }
 
-  onDown(indice : number){
+  onDown(indice : number) : void {
     this.sendQtDown.emit(indice);
   }
 

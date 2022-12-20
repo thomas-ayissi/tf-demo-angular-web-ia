@@ -4,7 +4,7 @@ import { ILink } from '../models/ILink';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],  
 })
 export class NavbarComponent {
   links : ILink[] = [
@@ -13,7 +13,8 @@ export class NavbarComponent {
       { title : 'Demo 1 - Les Bindings', url : '/demo/demo1'},
       { title : 'Demo 2 - Les Pipes', url : '/demo/demo2'},
       { title : 'Demo 3 - Les Directives', url : '/demo/demo3'},
-      { title : 'Demo 4 - Input & Output', url : '/demo/demo4'}
+      { title : 'Demo 4 - Input & Output', url : '/demo/demo4'},
+      { title : 'Demo 5 - Services', url : '/demo/demo5'}
     ], isVisible : false },
     { title : 'Exercice', url : '/exercice', children : [
       { title : 'Exercice 1 - Le timer', url : '/exercice/exo1'},
