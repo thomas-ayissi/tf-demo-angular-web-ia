@@ -1,5 +1,6 @@
 li {
     display: flex;
+    align-items: center;
 }
 
 li * {
@@ -7,5 +8,14 @@ li * {
 }
 
 .name {
-    width: 15%;
+    width: 10%;
+}
+
+.qtt {
+    width: 3%;
+}
+
+button {
+    height: 25px;
+    width: 50px;
 }

@@ -2,7 +2,7 @@
 <ul>
     <li *ngFor="let product of listProducts; let i = index">
         <div class="name">{{product.name}}</div> 
-        <div>{{product.qtt}}</div>
+        <div class="qtt">{{product.qtt}}</div>
         <div><button (click)="onDown(i)">➖</button></div>
         <div><button (click)="onUp(i)">➕</button></div>
         <div><button (click)="onDelete(i)">🗑</button></div>
