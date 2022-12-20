@@ -18,7 +18,8 @@ export class NavbarComponent {
     ], isVisible : false },
     { title : 'Exercice', url : '/exercice', children : [
       { title : 'Exercice 1 - Le timer', url : '/exercice/exo1'},
-      { title : 'Exercice 2 - La Shopping List', url : '/exercice/exo2'}
+      { title : 'Exercice 2 - La Shopping List Eco+', url : '/exercice/exo2'},
+      { title : 'Exercice 3 - La Shopping List', url : '/exercice/exo3'}
     ], isVisible : false}
   ]
 

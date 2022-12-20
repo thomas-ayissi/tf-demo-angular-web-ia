@@ -9,6 +9,8 @@ import { SharedModule } from '../shared/shared.module';
 import { Exo2Component } from './exo2/exo2.component';
 import { FormsModule } from '@angular/forms';
 import { PanierComponent } from './exo2/panier/panier.component';
+import { Exo3Component } from './exo3/exo3.component';
+import { PanierBisComponent } from './exo3/panier-bis/panier-bis.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { PanierComponent } from './exo2/panier/panier.component';
     Exo1Component,
     Exo2Component,
     PanierComponent,
+    Exo3Component,
+    PanierBisComponent,
   ],
   imports: [
     CommonModule,

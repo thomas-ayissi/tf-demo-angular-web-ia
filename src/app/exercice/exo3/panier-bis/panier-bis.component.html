@@ -1,0 +1,10 @@
+<h3>La liste</h3>
+<ul>
+    <li *ngFor="let product of listProduit; let i = index">
+        <div>{{product.name}}</div>
+        <div>{{product.qtt}}</div>
+        <button (click)="down(i)">➖</button>
+        <button (click)="up(i)">➕</button>
+        <button (click)="delete(i)">🗑</button>
+    </li>
+</ul>
