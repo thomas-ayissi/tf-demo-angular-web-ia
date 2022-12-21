@@ -1,0 +1,55 @@
+<h2>Les formulaires</h2>
+<div class="chapter">
+    <form (ngSubmit)="submitForm()" [formGroup]="monFormulaire">
+        <div>
+            <input type="text" placeholder="Nom" formControlName="lastname">
+            <!-- <span *ngIf="!monFormulaire.get('lastname')?.valid">Champs invalide</span> -->
+            <span class="txt-error" *ngIf="monFormulaire.get('lastname')?.touched && monFormulaire.get('lastname')?.errors?.['required']">Champs requis</span>
+            <span class="txt-error" *ngIf="monFormulaire.get('lastname')?.errors?.['minlength'] || monFormulaire.get('lastname')?.errors?.['maxlength'] ">Le nom doit faire au moins 2 et maximum 50 caractères</span>
+        </div>
+        <div>
+            <input type="text" placeholder="Prénom" formControlName="firstname">
+            <span class="txt-error" *ngIf="monFormulaire.get('firstname')?.touched && monFormulaire.get('firstname')?.errors?.['required']">Champs requis</span>
+            <span class="txt-error" *ngIf="monFormulaire.get('firstname')?.errors?.['minlength'] || monFormulaire.get('firstname')?.errors?.['maxlength'] ">Le nom doit faire au moins 2 et maximum 50 caractères</span>
+        </div>
+        <div>
+            <input type="date" placeholder="Date de Naissance" formControlName="birthdate">
+            <span class="txt-error" *ngIf="monFormulaire.get('birthdate')?.touched && monFormulaire.get('birthdate')?.errors?.['required']">Champs requis</span>
+            <span class="txt-error" *ngIf="monFormulaire.get('birthdate')?.touched && monFormulaire.get('birthdate')?.dirty && monFormulaire.get('birthdate')?.errors?.['mineur']">Vous devez être majeur pour vous enregistrer</span>
+        </div>
+        <div>
+            <input type="email" placeholder="Email" formControlName="email">
+            <span class="txt-error" *ngIf="monFormulaire.get('email')?.touched && monFormulaire.get('email')?.errors?.['required']">Champs requis</span>
+            <span class="txt-error" *ngIf="monFormulaire.get('email')?.touched && monFormulaire.get('email')?.dirty && monFormulaire.get('email')?.errors?.['email']">Veuillez entrer un format de mail valide</span>
+        </div>
+        <div>
+            <input type="password" placeholder="Mot de Passe" formControlName="password">
+            <span class="txt-error" *ngIf="monFormulaire.get('password')?.touched && monFormulaire.get('password')?.errors?.['required']">Champs requis</span>
+            <span class="txt-error" *ngIf="monFormulaire.get('password')?.touched && monFormulaire.get('password')?.dirty && monFormulaire.get('password')?.errors?.['pattern']">Le mot de passe doit faire au moins 8 caractères, contenir une majuscule, une minuscule, un chiffre et un caractère spécial</span>
+        </div>
+        <div>
+            <input type="tel" placeholder="Ton 04" formControlName="phone">
+
+        </div>
+        <div>
+            <input type="number" placeholder="Nombre Frères/Soeurs" formControlName="siblings">
+            <span class="txt-error" *ngIf="monFormulaire.get('siblings')?.touched && monFormulaire.get('siblings')?.errors?.['required']">Champs requis</span>
+            <span class="txt-error" *ngIf="monFormulaire.get('siblings')?.errors?.['min']">Debilos</span>
+        </div>
+        <div>
+            <select formControlName="country">
+                <option value="" hidden>Choisissez un pays</option>
+                <option value="fr">France</option>
+                <option value="be">Belgique</option>
+                <option value="ma">Maroc</option>
+                <option value="af">Afghanistan</option>
+            </select>
+            <span class="txt-error" *ngIf="monFormulaire.get('country')?.touched && monFormulaire.get('country')?.errors?.['required']">Champs requis</span>
+        </div>
+        <div>
+            <input id="celib" type="checkbox" formControlName="single"> <label for="celib"> Célibataire </label>
+        </div>
+
+        <input type="submit" value="Créer mon compte">
+    </form>
+</div>
