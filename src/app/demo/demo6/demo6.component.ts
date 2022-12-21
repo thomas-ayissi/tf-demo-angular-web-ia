@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-demo6',
@@ -22,7 +22,7 @@ export class Demo6Component {
       siblings : [null, [Validators.required, Validators.min(0)]],
       country : ['', [Validators.required]],
       single : [null, []]
-    }, { validators : [this.charoValidator] });
+    }, { validators : this.charoValidator() });
   }
 
   submitForm() : void {
@@ -56,8 +56,21 @@ export class Demo6Component {
     }
   }
 
-  charoValidator(form : FormGroup) : any {
-    //Vérifier si célib coché
+  // charoValidator(form : FormGroup) : any {
+  //   //Vérifier si célib coché
+  //   if(form.get('single')?.value) {
+  //     //Si oui, si null ou vide dans tel
+  //     if(form.get('phone')?.value === '' || form.get('phone')?.value === null ){
+  //       //Renvoie une erreur
+  //       return { charolife : true }
+  //     }
+  //   }
+  //   return null;
+  // }
+
+  charoValidator() : ValidatorFn | null {
+    return (form : AbstractControl) => {
+      //Vérifier si célib coché
     if(form.get('single')?.value) {
       //Si oui, si null ou vide dans tel
       if(form.get('phone')?.value === '' || form.get('phone')?.value === null ){
@@ -66,6 +79,8 @@ export class Demo6Component {
       }
     }
     return null;
+    }
+    
   }
 
 }
