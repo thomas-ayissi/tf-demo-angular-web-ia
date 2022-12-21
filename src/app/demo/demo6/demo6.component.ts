@@ -22,7 +22,7 @@ export class Demo6Component {
       siblings : [null, [Validators.required, Validators.min(0)]],
       country : ['', [Validators.required]],
       single : [null, []]
-    });
+    }, { validators : [this.charoValidator] });
   }
 
   submitForm() : void {
@@ -53,8 +53,19 @@ export class Demo6Component {
         }
       }
       return null;
-    };
+    }
+  }
 
+  charoValidator(form : FormGroup) : any {
+    //Vérifier si célib coché
+    if(form.get('single')?.value) {
+      //Si oui, si null ou vide dans tel
+      if(form.get('phone')?.value === '' || form.get('phone')?.value === null ){
+        //Renvoie une erreur
+        return { charolife : true }
+      }
+    }
+    return null;
   }
 
 }

@@ -48,6 +48,7 @@
         </div>
         <div>
             <input id="celib" type="checkbox" formControlName="single"> <label for="celib"> Célibataire </label>
+            <span class="txt-error" *ngIf="monFormulaire.errors?.['charolife']">Wesh bg envoie ton 06 😏</span>
         </div>
 
         <input type="submit" value="Créer mon compte">
