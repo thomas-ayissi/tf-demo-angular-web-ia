@@ -1,0 +1,145 @@
+<h2>Exo Formulaire © Moka</h2>
+<div class="chapter">
+    <form (ngSubmit)="submitForm()" [formGroup]="form">
+        <div formGroupName="form1">
+        <div>
+            <input type="text" placeholder="NIS" formControlName="nis">
+
+            <span class="txt-error" *ngIf="form.get('form1.nis')?.errors?.['required'] && form.get('form1.nis')?.touched">Champs
+                requis</span>
+
+            <span class="txt-error"
+                *ngIf="form.get('form1.nis')?.errors?.['minlength'] || form.get('form1.nis')?.errors?.['maxlength'] && form.get('form1.nis')?.touched && form.get('form1.nis')?.dirty">La
+                taille doit faire obligatoirement 11 chiffres</span>
+        </div>
+        <div>
+            <input type="text" placeholder="Nom" formControlName="nom">
+            <span class="txt-error" *ngIf="form.get('form1.nom')?.errors?.['required'] && form.get('form1.nom')?.touched">Champs
+                requis</span>
+        </div>
+        <div>
+            <input type="text" placeholder="Prénom" formControlName="prenom">
+            <span class="txt-error"
+                *ngIf="form.get('form1.prenom')?.errors?.['required'] && form.get('form1.prenom')?.touched">Champs requis</span>
+        </div>
+        <div>
+            <input type="date" placeholder="Date de naissance" formControlName="dateNaiss">
+            <span class="txt-error"
+                *ngIf="form.get('form1.dateNaiss')?.errors?.['required'] && form.get('form1.dateNaiss')?.touched">Champs
+                requis</span>
+            <span class="txt-error"
+                *ngIf="form.get('form1.dateNaiss')?.errors?.['mineur'] && form.get('form1.dateNaiss')?.touched">Il faut être majeur
+                pour s'inscrire</span>
+        </div>
+        <div>
+            <input type="radio" formControlName="genre" id="h" value="Homme">
+            <label for="h">Homme</label>
+
+            <input type="radio" formControlName="genre" id="f" value="Femme">
+            <label for="f">Femme</label>
+
+            <input type="radio" formControlName="genre" id="x" value="Autre">
+            <label for="x">Autre</label>
+        </div>
+        <div>
+            <select formControlName="typeCompte">
+                <option value="" hidden>Choisissez votre type de compte</option>
+                <option value="Part">Particulier</option>
+                <option value="Pro">Professionnel</option>
+                <option value="Stu">Étudiant</option>
+            </select>
+            <span class="txt-error"
+                *ngIf="form.get('form1.typeCompte')?.errors?.['required'] && form.get('form1.typeCompte')?.touched">Champs
+                requis</span>
+        </div>
+        <div>
+            <input type="tel" formControlName="tel" placeholder="Téléphone">
+        </div>
+        <div>
+            <input type="email" formControlName="email" placeholder="Email">
+            <span class="txt-error" *ngIf="form.get('form1.email')?.errors?.['required'] && form.get('form1.email')?.touched">Champs
+                requis</span>
+            <span class="txt-error"
+                *ngIf="form.get('form1.email')?.errors?.['form1.email'] && form.get('form1.email')?.touched  && form.get('form1.email')?.dirty">Adresse
+                mail non valide</span>
+        </div>
+        <div>
+            <input type="password" formControlName="mdp" placeholder="Mot de passe">
+            <span class="txt-error" *ngIf="form.get('form1.mdp')?.errors?.['required'] && form.get('form1.mdp')?.touched">Champs
+                requis</span>
+            <span class="txt-error"
+                *ngIf="form.get('form1.mdp')?.errors?.['pattern'] && form.get('form1.mdp')?.touched  && form.get('form1.mdp')?.dirty">Nombre
+                de caractère requis: 8
+                il doit contenir une majuscule, une minuscule, un chiffre et un caractère</span>
+        </div>
+        <div>
+            <input type="password" formControlName="mdp2" placeholder="Confirmation du mot de passe">
+            <span class="txt-error" *ngIf="form.get('form1.mdp2')?.errors?.['required'] && form.get('form1.mdp2')?.touched">Champs
+                requis</span>
+            <span class="txt-error"
+                *ngIf="form.get('form1.mdp2')?.dirty && form.errors?.['diff'] && form.get('form1.mdp2')?.touched">Divergeance de mot
+                de passe</span>
+        </div>
+        <div>
+            <label>Avez-vous une adresse? </label><input type="checkbox" formControlName="adresse"
+                placeholder="Adresse">
+        </div>
+    </div>
+        <!-- <div *ngIf="form.get('adresse')?.value" [formGroup]="form2"> -->
+        <div *ngIf="form.get('form1.adresse')?.value" formGroupName="adresseForm">
+            <div>
+                <input type="text" formControlName="rue" placeholder="Rue">
+                <span class="txt-error" *ngIf="form.get('adresseForm.rue')?.errors?.['required']">Champs requis</span>
+            </div>
+            <div>
+                <input type="text" formControlName="numero" placeholder="N°">
+                <span class="txt-error" *ngIf="form.get('adresseForm.numero')?.errors?.['required']">Champs requis</span>
+            </div>
+            <div>
+                <input type="text" formControlName="boite" placeholder="Boite">
+            </div>
+            <div>
+                <input type="number" formControlName="cp" placeholder="Code postal">
+                <span class="txt-error" *ngIf="form.get('adresseForm.cp')?.errors?.['required']">Champs requis</span>
+                <span class="txt-error" *ngIf="form.get('adresseForm.cp')?.errors?.['min']">Valeur minimum attendue => 1000</span>
+                <span class="txt-error" *ngIf="form.get('adresseForm.cp')?.errors?.['max']">Valeur maximum attendue => 9999</span>
+            </div>
+            <div>
+                <input type="text" formControlName="ville" placeholder="Ville">
+                <span class="txt-error" *ngIf="form.get('adresseForm.ville')?.errors?.['required']">Champs requis</span>
+            </div>
+            <div>
+                <input type="text" formControlName="pays" placeholder="Pays">
+                <span class="txt-error" *ngIf="form.get('adresseForm.pays')?.errors?.['required']">Champs requis</span>
+            </div>
+
+
+            <!-- <div>
+                <input type="text" formControlName="rue" placeholder="Rue">
+                <span class="txt-error" *ngIf="form2.get('rue')?.errors?.['required']">Champs requis</span>
+            </div>
+            <div>
+                <input type="text" formControlName="numero" placeholder="N°">
+                <span class="txt-error" *ngIf="form2.get('numero')?.errors?.['required']">Champs requis</span>
+            </div>
+            <div>
+                <input type="text" formControlName="boite" placeholder="Boite">
+            </div>
+            <div>
+                <input type="number" formControlName="cp" placeholder="Code postal">
+                <span class="txt-error" *ngIf="form2.get('cp')?.errors?.['required']">Champs requis</span>
+                <span class="txt-error" *ngIf="form2.get('cp')?.errors?.['min']">Valeur minimum attendue => 1000</span>
+                <span class="txt-error" *ngIf="form2.get('cp')?.errors?.['max']">Valeur maximum attendue => 9999</span>
+            </div>
+            <div>
+                <input type="text" formControlName="ville" placeholder="Ville">
+                <span class="txt-error" *ngIf="form2.get('ville')?.errors?.['required']">Champs requis</span>
+            </div>
+            <div>
+                <input type="text" formControlName="pays" placeholder="Pays">
+                <span class="txt-error" *ngIf="form2.get('pays')?.errors?.['required']">Champs requis</span>
+            </div> -->
+        </div>
+        <div><input type="submit" value="S'inscrire"></div>
+    </form>
+</div>

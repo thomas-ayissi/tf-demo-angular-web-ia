@@ -20,7 +20,8 @@ export class NavbarComponent {
     { title : 'Exercice', url : '/exercice', children : [
       { title : 'Exercice 1 - Le timer', url : '/exercice/exo1'},
       { title : 'Exercice 2 - La Shopping List Eco+', url : '/exercice/exo2'},
-      { title : 'Exercice 3 - La Shopping List', url : '/exercice/exo3'}
+      { title : 'Exercice 3 - La Shopping List', url : '/exercice/exo3'},
+      { title : 'Exercice 4 - Formulaire d\'inscription', url : '/exercice/exo4'}
     ], isVisible : false}
   ]
 
