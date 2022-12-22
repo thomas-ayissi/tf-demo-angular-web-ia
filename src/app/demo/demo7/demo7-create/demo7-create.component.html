@@ -1,0 +1,24 @@
+<h2>Ajouter un formateur</h2>
+<div class="chapter">
+    <a routerLink="/demo/demo7"><button>Revenir à la liste des formateurs</button></a>
+
+    <form [formGroup]="ajoutForm" (ngSubmit)="add()">
+        <div>
+            <input type="text" placeholder="Nom" formControlName="nom">
+            <span class="txt-error" *ngIf="ajoutForm.get('nom')?.errors?.['required']">Champs requis</span>
+        </div>
+        <div>
+            <input type="text" placeholder="Prénom" formControlName="prenom">
+            <span class="txt-error" *ngIf="ajoutForm.get('prenom')?.errors?.['required']">Champs requis</span>
+        </div>
+        <div>
+            <input type="date" placeholder="Date de naissance" formControlName="dateNaiss">
+            <span class="txt-error" *ngIf="ajoutForm.get('dateNaiss')?.errors?.['required']">Champs requis</span>
+        </div>
+        <div>
+            <input type="text" placeholder="Nom de l'animal" formControlName="animal">
+        </div>
+
+        <button type="submit">Créer formateur</button>
+    </form>
+</div>

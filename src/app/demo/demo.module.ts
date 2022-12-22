@@ -13,6 +13,8 @@ import { EnfantComponent } from './demo4/enfant/enfant.component';
 import { Demo5Component } from './demo5/demo5.component';
 import { Demo6Component } from './demo6/demo6.component';
 import { Demo7Component } from './demo7/demo7.component';
+import { Demo7CreateComponent } from './demo7/demo7-create/demo7-create.component';
+import { Demo7EditComponent } from './demo7/demo7-edit/demo7-edit.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { Demo7Component } from './demo7/demo7.component';
     Demo5Component,
     Demo6Component,
     Demo7Component,
+    Demo7CreateComponent,
+    Demo7EditComponent,
   ],
   imports: [
     CommonModule,
