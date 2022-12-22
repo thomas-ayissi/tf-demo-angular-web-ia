@@ -15,7 +15,8 @@ export class NavbarComponent {
       { title : 'Demo 3 - Les Directives', url : '/demo/demo3'},
       { title : 'Demo 4 - Input & Output', url : '/demo/demo4'},
       { title : 'Demo 5 - Services', url : '/demo/demo5'},
-      { title : 'Demo 6 - Les Formulaires', url : '/demo/demo6'}
+      { title : 'Demo 6 - Les Formulaires', url : '/demo/demo6'},
+      { title : 'Demo 7 - Routing -> Fake Crud complet', url : '/demo/demo7'}
     ], isVisible : false },
     { title : 'Exercice', url : '/exercice', children : [
       { title : 'Exercice 1 - Le timer', url : '/exercice/exo1'},
